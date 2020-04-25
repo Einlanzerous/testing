@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'
 import reduxPromise from 'redux-promise';
 import reducers from './reducers';
+import { BrowserRouter } from 'react-router-dom';
 
 export default ({ children, initialState = {} }) => {
   const store = createStore(
@@ -12,8 +13,10 @@ export default ({ children, initialState = {} }) => {
   );
 
   return (
-    <Provider store={store}>
-      {children}
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        {children}
+      </Provider>
+    </BrowserRouter>
   );
 };

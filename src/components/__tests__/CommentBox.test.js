@@ -4,16 +4,17 @@ import CommentBox from '../CommentBox';
 import Root from '../../Root';
 
 let component;
+const mockedHistory = {
+  push: jest.fn(),
+  listen: jest.fn()
+};
+
 beforeEach(() => {
   component = mount(
     <Root>
-      <CommentBox />
+      <CommentBox auth={true} history={mockedHistory} />
     </Root>
   );
-});
-
-afterEach(() => {
-  component.unmount();
 });
 
 it('has a text area and two buttons', () => {
