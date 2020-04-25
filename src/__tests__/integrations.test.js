@@ -22,6 +22,7 @@ beforeEach(() => {
 
 afterEach(() => {
   moxios.uninstall();
+  component.unmount();
 });
 
 it('can fetch a list of comments and display them', (done) => {
@@ -33,7 +34,6 @@ it('can fetch a list of comments and display them', (done) => {
     expect(component.find('.comments').length).toEqual(response.length);
 
     done();
-    component.unmount();
   });
 });
 
