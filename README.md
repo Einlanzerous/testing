@@ -1,3 +1,9 @@
+## Backend Focused project
+
+So it's ugly looking, but playing around with React-Redux
+
+______________________________________________________________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
